@@ -15,27 +15,28 @@ const channelsData = {
     ],
     news: [
         { name: "Al Jazeera", type: "News", url: "https://live-hls-web-aje-fa.getaj.net/AJE/index.m3u8" },
-        { name: "BBC News", type: "News", url: "http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=cs15" }
+        { name: "BBC News", type: "News", url: "/stream6/zhongying/live/playlist.m3u8?cid=cs15" }
     ],
     sports: [
-        { name: "T-Sports 1 (Server 1)", type: "Sports", url: "http://198.195.239.50:8095/tsports/tracks-v1a1/mono.m3u8" },
-        { name: "T-Sports 2 (Server 2)", type: "Sports", url: "http://114.130.57.233:8080/T-Sports/tracks-v1a1/mono.m3u8?token=SkQuhAXZxgBan1" },
-        { name: "T-Sports 3 (Server 3)", type: "Sports", url: "http://ubuntu.moonplex.net:8080/TSports_HD/index.m3u8" },
+        { name: "T-Sports 1 (Server 1)", type: "Sports", url: "/stream1/tsports/tracks-v1a1/mono.m3u8" },
+        { name: "T-Sports 2 (Server 2)", type: "Sports", url: "/stream2/T-Sports/tracks-v1a1/mono.m3u8?token=SkQuhAXZxgBan1" },
+        { name: "T-Sports 3 (Server 3)", type: "Sports", url: "/stream3/TSports_HD/index.m3u8" },
         { name: "T-Sports 4 (Server 4)", type: "Sports", url: "https://tvsen7.aynaott.com/tsports-hd/index.m3u8" },
-        { name: "Star Sports 1", type: "Sports", url: "http://tvn1.chowdhury-shaheb.com/starsport1/index.m3u8" },
-        { name: "Star Sports 2", type: "Sports", url: "http://tvn1.chowdhury-shaheb.com/starsport2/index.m3u8" },
+        { name: "Star Sports 1", type: "Sports", url: "/stream4/starsport1/index.m3u8" },
+        { name: "Star Sports 2", type: "Sports", url: "/stream4/starsport2/index.m3u8" },
         { name: "Sony Sports 1 HD", type: "Sports", url: "https://tvsen7.aynaott.com/tsports-hd/index.m3u8" },
-        { name: "PTV Sports", type: "Sports", url: "http://198.195.239.50:8095/PTV-kutta/video.m3u8" }
+        { name: "PTV Sports", type: "Sports", url: "/stream1/PTV-kutta/video.m3u8" }
     ],
     hindi: [
         { name: "Star Jalsha HD", type: "Entertainment", url: "https://yupptvcatchupire.yuppcdn.net/preview/starjalsha/1800.m3u8" },
-        { name: "Colors Bangla", type: "Entertainment", url: "http://198.195.239.50:8095/ColorsBanglaChinema/tracks-v1a1/mono.m3u8" },
+        { name: "Colors Bangla", type: "Entertainment", url: "/stream1/ColorsBanglaChinema/tracks-v1a1/mono.m3u8" },
         { name: "Sony Aath", type: "Entertainment", url: "https://stream.ottplus.bd/live/sony_aath_abr/live/sony_aath_720/chunks.m3u8" },
         { name: "&PICTURES HD", type: "Movies", url: "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8" },
         { name: "Star Gold HD", type: "Movies", url: "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8" },
-        { name: "Zee Bangla HD", type: "Entertainment", url: "http://103.161.153.165:8000/play/a01a/index.m3u8" }
+        { name: "Zee Bangla HD", type: "Entertainment", url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1703/output/index.m3u8" }
     ]
 };
+
 
 const navItems = document.querySelectorAll('.nav-links li');
 const grid = document.getElementById('channels-grid');
