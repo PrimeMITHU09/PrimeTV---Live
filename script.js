@@ -20,13 +20,15 @@ const channelsData = {
         { name: "BBC News", type: "News", url: "https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pservices:simulcast:bbc_news_channel_hd/t=3840/v=pv14/b=5070016/main.m3u8" }
     ],
     sports: [
-        { name: "T-Sports (YouTube Live)", type: "Sports", url: "https://www.youtube.com/embed/live_stream?channel=UCMiRgSiZVKR7-yHG2LqhBaQ&autoplay=1&mute=1" },
-        { name: "T-Sports (Server 2)", type: "Sports", url: PROXY + encodeURIComponent("http://114.130.57.233:8080/T-Sports/tracks-v1a1/mono.m3u8?token=SkQuhAXZxgBan1") },
-        { name: "T-Sports (Server 3)", type: "Sports", url: "https://tvsen7.aynaott.com/tsports-hd/index.m3u8" },
-        { name: "T-Sports (Server 4)", type: "Sports", url: PROXY + encodeURIComponent("http://198.195.239.50:8095/tsports/tracks-v1a1/mono.m3u8") },
+        { name: "T-Sports Live (Direct HTTPS)", type: "Sports", url: "https://tvsen7.aynaott.com/tsports-hd/index.m3u8" },
+        { name: "T-Sports Live 1 (Official)", type: "Sports", url: "https://live.tsports.com/mobile_hls/tsports_live_1/playlist.m3u8" },
+        { name: "T-Sports Live 2 (Official)", type: "Sports", url: "https://live.tsports.com/mobile_hls/tsports_live_2/playlist.m3u8" },
+        { name: "T-Sports Live 3 (Official)", type: "Sports", url: "https://live.tsports.com/mobile_hls/tsports_live_3/playlist.m3u8" },
+        { name: "T-Sports Server 2", type: "Sports", url: PROXY + encodeURIComponent("http://114.130.57.233:8080/T-Sports/tracks-v1a1/mono.m3u8?token=SkQuhAXZxgBan1") },
+        { name: "T-Sports Server 3", type: "Sports", url: PROXY + encodeURIComponent("http://198.195.239.50:8095/tsports/tracks-v1a1/mono.m3u8") },
         { name: "Star Sports 1", type: "Sports", url: PROXY + encodeURIComponent("http://tvn1.chowdhury-shaheb.com/starsport1/index.m3u8") },
         { name: "Star Sports 2", type: "Sports", url: PROXY + encodeURIComponent("http://tvn1.chowdhury-shaheb.com/starsport2/index.m3u8") },
-        { name: "Sony Sports 1 HD", type: "Sports", url: "https://tvsen7.aynaott.com/tsports-hd/index.m3u8" },
+        { name: "Sony Sports HD", type: "Sports", url: "https://tvsen7.aynaott.com/tsports-hd/index.m3u8" },
         { name: "PTV Sports", type: "Sports", url: PROXY + encodeURIComponent("http://198.195.239.50:8095/PTV-kutta/video.m3u8") }
     ],
     hindi: [
