@@ -20,10 +20,10 @@ const channelsData = {
         { name: "BBC News", type: "News", url: "https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pservices:simulcast:bbc_news_channel_hd/t=3840/v=pv14/b=5070016/main.m3u8" }
     ],
     sports: [
-        { name: "T-Sports 1 (Server 1)", type: "Sports", url: PROXY + encodeURIComponent("http://198.195.239.50:8095/tsports/tracks-v1a1/mono.m3u8") },
-        { name: "T-Sports 2 (Server 2)", type: "Sports", url: PROXY + encodeURIComponent("http://114.130.57.233:8080/T-Sports/tracks-v1a1/mono.m3u8?token=SkQuhAXZxgBan1") },
-        { name: "T-Sports 3 (Server 3)", type: "Sports", url: PROXY + encodeURIComponent("http://ubuntu.moonplex.net:8080/TSports_HD/index.m3u8") },
-        { name: "T-Sports 4 (Server 4)", type: "Sports", url: "https://tvsen7.aynaott.com/tsports-hd/index.m3u8" },
+        { name: "T-Sports (YouTube Live)", type: "Sports", url: "https://www.youtube.com/embed/live_stream?channel=UCMiRgSiZVKR7-yHG2LqhBaQ&autoplay=1&mute=1" },
+        { name: "T-Sports (Server 2)", type: "Sports", url: PROXY + encodeURIComponent("http://114.130.57.233:8080/T-Sports/tracks-v1a1/mono.m3u8?token=SkQuhAXZxgBan1") },
+        { name: "T-Sports (Server 3)", type: "Sports", url: "https://tvsen7.aynaott.com/tsports-hd/index.m3u8" },
+        { name: "T-Sports (Server 4)", type: "Sports", url: PROXY + encodeURIComponent("http://198.195.239.50:8095/tsports/tracks-v1a1/mono.m3u8") },
         { name: "Star Sports 1", type: "Sports", url: PROXY + encodeURIComponent("http://tvn1.chowdhury-shaheb.com/starsport1/index.m3u8") },
         { name: "Star Sports 2", type: "Sports", url: PROXY + encodeURIComponent("http://tvn1.chowdhury-shaheb.com/starsport2/index.m3u8") },
         { name: "Sony Sports 1 HD", type: "Sports", url: "https://tvsen7.aynaott.com/tsports-hd/index.m3u8" },
