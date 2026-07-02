@@ -1,0 +1,43 @@
+[build]
+  publish = "."
+
+# Proxy for HTTP IPTV server 1 (198.195.239.50:8095)
+[[redirects]]
+  from = "/stream1/*"
+  to = "http://198.195.239.50:8095/:splat"
+  status = 200
+  force = true
+
+# Proxy for HTTP IPTV server 2 (114.130.57.233:8080)
+[[redirects]]
+  from = "/stream2/*"
+  to = "http://114.130.57.233:8080/:splat"
+  status = 200
+  force = true
+
+# Proxy for HTTP IPTV server 3 (ubuntu.moonplex.net)
+[[redirects]]
+  from = "/stream3/*"
+  to = "http://ubuntu.moonplex.net:8080/:splat"
+  status = 200
+  force = true
+
+# Proxy for HTTP IPTV server 4 (tvn1.chowdhury-shaheb.com)
+[[redirects]]
+  from = "/stream4/*"
+  to = "http://tvn1.chowdhury-shaheb.com/:splat"
+  status = 200
+  force = true
+
+# Proxy for HTTP IPTV server 5 (103.229.254.25)
+[[redirects]]
+  from = "/stream5/*"
+  to = "http://103.229.254.25:7001/:splat"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, OPTIONS"
