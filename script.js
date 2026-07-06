@@ -2,7 +2,9 @@ const PROXY = 'https://primetvlive.primetvlive.workers.dev/?url=';
 
 const channelsData = {
     sports: [
-        { name: "Football World Cup", type: "Sports", url: "http://180.94.28.28:8097/Fifa-2026/index.m3u8" }
+        { name: "Football World Cup (Local ISP)", type: "Sports", url: "http://180.94.28.28:8097/Fifa-2026/index.m3u8" },
+        { name: "Test Stream (Proxied HTTP)", type: "Sports", url: "http://sample.vodobox.net/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8" },
+        { name: "Test Stream (Direct HTTPS)", type: "Sports", url: "https://test-streams.mux.dev/x36xhg7/x36xhg7.m3u8" }
     ]
 };
 
