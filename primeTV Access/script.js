@@ -1,39 +1,53 @@
+const PROXY = 'https://primetvlive.primetvlive.workers.dev/?url=';
+
 const channelsData = {
-    bangla: [
-        { name: "Sangshod TV", type: "National", url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1709/output/index.m3u8" },
-        { name: "Channel-1", type: "News", url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1702/output/index.m3u8" },
-        { name: "Channel 24", type: "News", url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1703/output/index.m3u8" },
-        { name: "Independent TV", type: "News", url: "https://www.youtube.com/embed/wp2rwNZucNY?autoplay=1&mute=1" },
-        { name: "Jamuna TV", type: "News", url: "https://www.youtube.com/embed/hOX0_kkHpmI?autoplay=1&mute=1" },
-        { name: "ATN NEWS [BD]", type: "News", url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1706/output/1706.m3u8" },
-        { name: "Deepto TV", type: "Entertainment", url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1711/output/index.m3u8" },
-        { name: "Maasranga Tv", type: "Entertainment", url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1722/output/index.m3u8" },
-        { name: "Channel 9", type: "Entertainment", url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1729/output/index.m3u8" },
-        { name: "SOMOY TV", type: "News", url: "https://www.youtube.com/embed/5pDFyZdtvKY?autoplay=1&mute=1" },
-        { name: "Star News", type: "News", url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1710/output/1710-audio_113402_eng=113200-video=3224800.m3u8" },
-        { name: "Ekattor TV", type: "News", url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1705/output/1705.m3u8" }
-    ],
-    news: [
-        { name: "Al Jazeera", type: "News", url: "https://live-hls-web-aje-fa.getaj.net/AJE/index.m3u8" },
-        { name: "BBC News", type: "News", url: "/stream6/zhongying/live/playlist.m3u8?cid=cs15" }
-    ],
     sports: [
-        { name: "T-Sports 1 (Server 1)", type: "Sports", url: "/stream1/tsports/tracks-v1a1/mono.m3u8" },
-        { name: "T-Sports 2 (Server 2)", type: "Sports", url: "/stream2/T-Sports/tracks-v1a1/mono.m3u8?token=SkQuhAXZxgBan1" },
-        { name: "T-Sports 3 (Server 3)", type: "Sports", url: "/stream3/TSports_HD/index.m3u8" },
-        { name: "T-Sports 4 (Server 4)", type: "Sports", url: "https://tvsen7.aynaott.com/tsports-hd/index.m3u8" },
-        { name: "Star Sports 1", type: "Sports", url: "/stream4/starsport1/index.m3u8" },
-        { name: "Star Sports 2", type: "Sports", url: "/stream4/starsport2/index.m3u8" },
-        { name: "Sony Sports 1 HD", type: "Sports", url: "https://tvsen7.aynaott.com/tsports-hd/index.m3u8" },
-        { name: "PTV Sports", type: "Sports", url: "/stream1/PTV-kutta/video.m3u8" }
-    ],
-    hindi: [
-        { name: "Star Jalsha HD", type: "Entertainment", url: "https://yupptvcatchupire.yuppcdn.net/preview/starjalsha/1800.m3u8" },
-        { name: "Colors Bangla", type: "Entertainment", url: "/stream1/ColorsBanglaChinema/tracks-v1a1/mono.m3u8" },
-        { name: "Sony Aath", type: "Entertainment", url: "https://stream.ottplus.bd/live/sony_aath_abr/live/sony_aath_720/chunks.m3u8" },
-        { name: "&PICTURES HD", type: "Movies", url: "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8" },
-        { name: "Star Gold HD", type: "Movies", url: "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/ColorsHD/default/ColorsHD.m3u8" },
-        { name: "Zee Bangla HD", type: "Entertainment", url: "https://owrcovcrpy.gpcdn.net/bpk-tv/1703/output/index.m3u8" }
+        // World Cup BD
+        { name: "Football World Cup (BTV)", type: "Sports", url: "http://114.130.57.233:8080/BTV/video.m3u8?token=SkQuhAXZxgBan1" },
+        { name: "Football World Cup (Somoy)", type: "Sports", url: "http://198.195.239.50:8095/somoyTv/index.m3u8" },
+        { name: "Football World Cup (PTV)", type: "Sports", url: "http://198.195.239.50:8095/ptv/index.m3u8" },
+        { name: "Football World Cup (Fifa-2026)", type: "Sports", url: "http://180.94.28.28:8097/Fifa-2026/index.m3u8" },
+        
+        // Toffee World Cup
+        { name: "Toffee 1", type: "Sports", url: "https://cdn-tt.pages.dev/ch3.m3u8" },
+        { name: "Toffee 2", type: "Sports", url: "https://cdn-tt.pages.dev/ch1.m3u8" },
+        { name: "Toffee 3", type: "Sports", url: "https://cdn-tt.pages.dev/ch2.m3u8" },
+        { name: "Toffee 4", type: "Sports", url: "https://cdn-tt.pages.dev/ch4.m3u8" },
+
+        // Bioscope World Cup
+        { name: "Bioscope", type: "Sports", url: "https://bioscope-ultra.sm-monirulislam-exp.workers.dev/bioscope.m3u8" },
+        { name: "I SCREEN HD", type: "Sports", url: "https://tc-sg.rockstreamer.com/v1/019ed91616121ea540a8171c8e801f/019ed92ac80315fc600b1796d4ad8b/main.m3u8", referer: "https://iscreen.com.bd/" },
+
+        // World Cup Global
+        { name: "Unite8", type: "Sports", url: "http://198.195.239.50:8095/unt-s/video.m3u8" },
+        { name: "Caze TV Brazil 🇧🇷", type: "Sports", url: "https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8" },
+
+        // TSN
+        { name: "TSN 1", type: "Sports", url: "http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/748388.ts" },
+        { name: "TSN 2", type: "Sports", url: "http://starhub.pro/live/farhat-3379/67897-913379/748388.ts" },
+
+        // Previous Sport Channels
+        { name: "T Sports HD", type: "Sports", url: "https://trs1.aynaott.com/tsports/index.m3u8" },
+        { name: "Bein Sports 1 HD", type: "Sports", url: "https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8" },
+        { name: "beIN SPORTS 1 UHD", type: "Sports", url: "http://proxpanel.cc/h1wqD6CY/byxHYgX/707929" },
+        { name: "ESPN S1", type: "Sports", url: "https://1nyaler.streamhostingcdn.top/stream/97/index.m3u8" },
+        { name: "ESPN S2", type: "Sports", url: "http://186.33.40.97:8789/play/20" },
+        { name: "FOX Sports", type: "Sports", url: "http://84.17.50.102/fox/index.m3u8" },
+        { name: "FS1", type: "Sports", url: "http://fastshare1.com:8080/live/931461266/374152877/751354.ts?RKDYIPTV&token=rkdyiptv" },
+        { name: "Telemundo", type: "Sports", url: "https://nbculocallive.akamaized.net/hls/live/2037499/puertorico/stream1/master.m3u8" },
+        { name: "TVRI Sport", type: "Sports", url: "http://103.148.44.38:8000/play/a05u/index.m3u8" },
+        { name: "TNS 1", type: "Sports", url: "http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3146.ts" },
+        { name: "TNS 2", type: "Sports", url: "http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3145.ts" },
+        { name: "Unite 8 Sports 1 HD", type: "Sports", url: "http://starhub.pro/live/farhat-3379/67897-913379/741567.ts" },
+        { name: "Unite 8 Sports 2 HD", type: "Sports", url: "http://212.102.34.8:9080/AndFlixHD/video.m3u8" },
+        { name: "TVP Sports", type: "Sports", url: "https://1nyaler.streamhostingcdn.top/stream/89/index.m3u8" },
+        { name: "M6", type: "Sports", url: "https://tv.beyondtaxconsultants.com/api/robi/lps/http://151.80.18.177:86/M6_HD/index.m3u8" },
+        { name: "WIN Sports", type: "Sports", url: "https://1nyaler.streamhostingcdn.top/stream/32/index.m3u8" },
+        { name: "S Football", type: "Sports", url: "http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/745149.ts" },
+        { name: "PTV 4K", type: "Sports", url: "http://starhub.pro/live/farhat-3379/67897-913379/89.ts" },
+        { name: "DAZN 1", type: "Sports", url: "https://1nyaler.streamhostingcdn.top/stream/94/index.m3u8" },
+        { name: "D Sports", type: "Sports", url: "https://1nyaler.streamhostingcdn.top/stream/106/index.m3u8" },
+        { name: "Tudn Sports", type: "Sports", url: "https://1nyaler.streamhostingcdn.top/stream/52/index.m3u8" }
     ]
 };
 
@@ -92,6 +106,15 @@ function renderChannels(category) {
                     return;
                 }
 
+                let finalStreamUrl = streamUrl;
+                if (streamUrl.startsWith('http://') || channel.referer) {
+                    let proxyUrl = PROXY + encodeURIComponent(streamUrl);
+                    if (channel.referer) {
+                        proxyUrl += '&referer=' + encodeURIComponent(channel.referer);
+                    }
+                    finalStreamUrl = proxyUrl;
+                }
+
                 // Support for iframe-based players (like YouTube or redforce.live)
                 if (streamUrl.includes('player.php') || streamUrl.includes('iframe') || streamUrl.includes('youtube.com') || streamUrl.includes('youtu.be')) {
                     playerArea.innerHTML = `
@@ -106,7 +129,7 @@ function renderChannels(category) {
                 playerArea.innerHTML = `
                     <div style="position: relative; width: 100%; height: 100%;">
                         <div class="live-badge" style="top: 15px; left: 15px; right: auto; z-index: 10;">LIVE</div>
-                        <video id="hls-video" controls autoplay muted style="width: 100%; height: 100%; border-radius: 12px; object-fit: cover; background: #000;"></video>
+                        <video id="hls-video" controls autoplay style="width: 100%; height: 100%; border-radius: 12px; object-fit: contain; background: #000;"></video>
                         <div id="player-error" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #111; border-radius: 12px; align-items:center; justify-content:center; flex-direction:column; color:#ef4444; z-index: 20;">
                             <i class="fa-solid fa-triangle-exclamation" style="font-size: 4rem; margin-bottom: 15px;"></i>
                             <h2>Server Offline</h2>
@@ -118,18 +141,36 @@ function renderChannels(category) {
                 const video = document.getElementById('hls-video');
                 const errorUI = document.getElementById('player-error');
                 
+                // Initialize Plyr for a premium, normal floating UI experience
+                const player = new Plyr(video, {
+                    controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'pip', 'fullscreen']
+                });
+                
                 if (Hls.isSupported()) {
                     const hls = new Hls({
-                        maxBufferLength: 60,
-                        maxMaxBufferLength: 120,
-                        liveSyncDurationCount: 3,
-                        liveMaxLatencyDurationCount: 10,
+                        lowLatencyMode: true, // Enable aggressive low latency
+                        liveSyncDurationCount: 1, // Stay extremely close to the live edge (reduces delay)
+                        liveMaxLatencyDurationCount: 3, // Auto-seek if it falls 3 segments behind
+                        maxBufferLength: 10, // Buffer less into the future to force real-time
+                        maxMaxBufferLength: 30,
                         enableWorker: true
                     });
-                    hls.loadSource(streamUrl);
+                    hls.loadSource(finalStreamUrl);
                     hls.attachMedia(video);
                     
                     hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                        // Force highest quality (HD) by finding the level with the highest bitrate
+                        if (hls.levels && hls.levels.length > 0) {
+                            let maxIndex = 0;
+                            let maxBitrate = 0;
+                            hls.levels.forEach((level, index) => {
+                                if (level.bitrate > maxBitrate) {
+                                    maxBitrate = level.bitrate;
+                                    maxIndex = index;
+                                }
+                            });
+                            hls.currentLevel = maxIndex; // Set to highest quality instead of Auto
+                        }
                         video.play().catch(e => console.log("Autoplay prevented:", e));
                     });
                     
@@ -150,7 +191,7 @@ function renderChannels(category) {
                     });
                 } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
                     // For Safari
-                    video.src = streamUrl;
+                    video.src = finalStreamUrl;
                     video.addEventListener('loadedmetadata', function() {
                         video.play().catch(e => console.log("Autoplay prevented:", e));
                     });
@@ -189,49 +230,5 @@ navItems.forEach(item => {
     });
 });
 
-// Initial render for Bangla category
-renderChannels('bangla');
-
-// Dynamic Active User Count (Random Simulation)
-const userCountEl = document.getElementById('active-user-count');
-if (userCountEl) {
-    let currentUsers = 1245; // Start value
-    
-    setInterval(() => {
-        // Random fluctuation between -15 and +25
-        const fluctuation = Math.floor(Math.random() * 41) - 15;
-        currentUsers += fluctuation;
-        
-        // Keep it realistic between 400 and 1500 (per your request)
-        if (currentUsers < 400) currentUsers = 400 + Math.floor(Math.random() * 50);
-        if (currentUsers > 1500) currentUsers = 1500 - Math.floor(Math.random() * 50);
-        
-        userCountEl.textContent = currentUsers.toLocaleString();
-    }, 4500); // update every 4.5 seconds
-}
-
-// Real Visit Counter using CounterAPI (free, no signup needed)
-const realCountEl = document.getElementById('real-user-count');
-if (realCountEl) {
-    // Each page load increments the count by 1
-    fetch('https://api.counterapi.dev/v1/primetvlive/totalvisits/up', { mode: 'cors' })
-        .then(res => res.json())
-        .then(data => {
-            if (data && data.count !== undefined) {
-                realCountEl.textContent = data.count.toLocaleString();
-            }
-        })
-        .catch(() => {
-            // Fallback: just fetch without incrementing
-            fetch('https://api.counterapi.dev/v1/primetvlive/totalvisits', { mode: 'cors' })
-                .then(res => res.json())
-                .then(data => {
-                    if (data && data.count !== undefined) {
-                        realCountEl.textContent = data.count.toLocaleString();
-                    }
-                })
-                .catch(() => {
-                    realCountEl.textContent = '--';
-                });
-        });
-}
+// Initial render for Sports category
+renderChannels('sports');

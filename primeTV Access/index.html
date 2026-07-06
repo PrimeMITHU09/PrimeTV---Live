@@ -11,8 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Plyr CSS for beautiful video controls -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.css" />
     <!-- HLS.js for M3U8 streaming -->
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <!-- Plyr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.polyfilled.min.js"></script>
 </head>
 <body>
     <div class="app-container">
@@ -22,24 +26,14 @@
                 <h2>PrimeTV</h2>
             </div>
             <ul class="nav-links">
-                <li class="active" data-category="bangla">Bangla</li>
-                <li data-category="hindi">Kolkata</li>
-                <li data-category="news">International News</li>
-                <li data-category="sports">FIFA Special</li>
+                <li class="active" data-category="sports">Sports</li>
             </ul>
         </nav>
 
         <!-- Main Content Area -->
         <main class="main-content">
             <header style="display: flex; gap: 15px; justify-content: flex-end; align-items: center;">
-                <div class="active-users-badge" title="Live Watching">
-                    <i class="fa-solid fa-users"></i>
-                    <span>Active Users: <strong id="active-user-count">1,245</strong></span>
-                </div>
-                <div class="real-users-badge" title="Total Real Visits">
-                    <i class="fa-solid fa-eye"></i>
-                    <strong id="real-user-count">0</strong>
-                </div>
+                <!-- Badges removed -->
             </header>
 
             <section class="player-section">
