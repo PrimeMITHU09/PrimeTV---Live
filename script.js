@@ -2,9 +2,32 @@ const PROXY = 'https://primetvlive.primetvlive.workers.dev/?url=';
 
 const channelsData = {
     sports: [
+        // World Cup BD
+        { name: "Football World Cup (BTV)", type: "Sports", url: "http://114.130.57.233:8080/BTV/video.m3u8?token=SkQuhAXZxgBan1" },
+        { name: "Football World Cup (Somoy)", type: "Sports", url: "http://198.195.239.50:8095/somoyTv/index.m3u8" },
+        { name: "Football World Cup (PTV)", type: "Sports", url: "http://198.195.239.50:8095/ptv/index.m3u8" },
+        { name: "Football World Cup (Fifa-2026)", type: "Sports", url: "http://180.94.28.28:8097/Fifa-2026/index.m3u8" },
+        
+        // Toffee World Cup
+        { name: "Toffee 1", type: "Sports", url: "https://cdn-tt.pages.dev/ch3.m3u8" },
+        { name: "Toffee 2", type: "Sports", url: "https://cdn-tt.pages.dev/ch1.m3u8" },
+        { name: "Toffee 3", type: "Sports", url: "https://cdn-tt.pages.dev/ch2.m3u8" },
+        { name: "Toffee 4", type: "Sports", url: "https://cdn-tt.pages.dev/ch4.m3u8" },
+
+        // Bioscope World Cup
+        { name: "Bioscope", type: "Sports", url: "https://bioscope-ultra.sm-monirulislam-exp.workers.dev/bioscope.m3u8" },
+        { name: "I SCREEN HD", type: "Sports", url: "https://tc-sg.rockstreamer.com/v1/019ed91616121ea540a8171c8e801f/019ed92ac80315fc600b1796d4ad8b/main.m3u8", referer: "https://iscreen.com.bd/" },
+
+        // World Cup Global
+        { name: "Unite8", type: "Sports", url: "http://198.195.239.50:8095/unt-s/video.m3u8" },
+        { name: "Caze TV Brazil 🇧🇷", type: "Sports", url: "https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/Caze_TV.m3u8" },
+
+        // TSN
+        { name: "TSN 1", type: "Sports", url: "http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/748388.ts" },
+        { name: "TSN 2", type: "Sports", url: "http://starhub.pro/live/farhat-3379/67897-913379/748388.ts" },
+
+        // Previous Sport Channels
         { name: "T Sports HD", type: "Sports", url: "https://trs1.aynaott.com/tsports/index.m3u8" },
-        { name: "BTV", type: "Sports", url: "http://198.195.239.50:8095/btv/tracks-v1a1/mono.m3u8" },
-        { name: "Somoy TV", type: "Sports", url: "https://live.thebosstv.com:30443/dwlive/Somoy-TV/chunks.m3u8" },
         { name: "Bein Sports 1 HD", type: "Sports", url: "https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8" },
         { name: "beIN SPORTS 1 UHD", type: "Sports", url: "http://proxpanel.cc/h1wqD6CY/byxHYgX/707929" },
         { name: "ESPN S1", type: "Sports", url: "https://1nyaler.streamhostingcdn.top/stream/97/index.m3u8" },
@@ -84,8 +107,12 @@ function renderChannels(category) {
                 }
 
                 let finalStreamUrl = streamUrl;
-                if (streamUrl.startsWith('http://')) {
-                    finalStreamUrl = PROXY + encodeURIComponent(streamUrl);
+                if (streamUrl.startsWith('http://') || channel.referer) {
+                    let proxyUrl = PROXY + encodeURIComponent(streamUrl);
+                    if (channel.referer) {
+                        proxyUrl += '&referer=' + encodeURIComponent(channel.referer);
+                    }
+                    finalStreamUrl = proxyUrl;
                 }
 
                 // Support for iframe-based players (like YouTube or redforce.live)

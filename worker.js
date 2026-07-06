@@ -22,10 +22,11 @@ export default {
     }
 
     try {
+      const customReferer = url.searchParams.get('referer')
       const response = await fetch(targetUrl, {
         headers: {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-          'Referer': new URL(targetUrl).origin,
+          'Referer': customReferer || new URL(targetUrl).origin,
         }
       })
 
