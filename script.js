@@ -2,9 +2,16 @@ const PROXY = 'https://primetvlive.primetvlive.workers.dev/?url=';
 
 const channelsData = {
     sports: [
-        { name: "Football World Cup (Local ISP)", type: "Sports", url: "http://180.94.28.28:8097/Fifa-2026/index.m3u8" },
-        { name: "Test Stream (Proxied HTTP)", type: "Sports", url: "http://sample.vodobox.net/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8" },
-        { name: "Test Stream (Direct HTTPS)", type: "Sports", url: "https://test-streams.mux.dev/x36xhg7/x36xhg7.m3u8" }
+        { name: "T Sports HD (Server 1)", type: "Sports", url: "https://tvsen7.aynaott.com/tsports-hd/tracks-v1a1/mono.ts.m3u8" },
+        { name: "T Sports Live (Server 2)", type: "Sports", url: "http://198.195.239.50:8095/Tsports/tracks-v1a1/mono.m3u8" },
+        { name: "FIFA World Cup (Server 1)", type: "Sports", url: "https://next.badinan.xyz/nexttv/FHD/playlist.m3u8" },
+        { name: "FIFA World Cup (Server 2)", type: "Sports", url: "https://kazimmt.ami.bd/playlist/TF/TF-1.m3u8" },
+        { name: "FIFA World Cup (Server 3)", type: "Sports", url: "http://66.102.126.10:8000/play/a018/index.m3u8" },
+        { name: "FIFA World Cup (Server 4)", type: "Sports", url: "https://xclive.yarncdn.live/live/xctv_blv_tholan/playlist.m3u8" },
+        { name: "FIFA World Cup (Server 5)", type: "Sports", url: "https://andro.226503.xyz/checklist/androstreamlivebs1.m3u8" },
+        { name: "FIFA World Cup (Server 6)", type: "Sports", url: "https://live05.koepgd.app/live/24561735.m3u8" },
+        { name: "T Sports App Link 1", type: "Sports", url: "https://live.tsports.com/mobile_hls/tsports_live_1/playlist.m3u8" },
+        { name: "T Sports App Link 2", type: "Sports", url: "https://live.tsports.com/mobile_hls/tsports_live_3/playlist.m3u8" }
     ]
 };
 
