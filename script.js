@@ -2,16 +2,29 @@ const PROXY = 'https://primetvlive.primetvlive.workers.dev/?url=';
 
 const channelsData = {
     sports: [
-        { name: "T Sports HD (Server 1)", type: "Sports", url: "https://tvsen7.aynaott.com/tsports-hd/tracks-v1a1/mono.ts.m3u8" },
-        { name: "T Sports Live (Server 2)", type: "Sports", url: "http://198.195.239.50:8095/Tsports/tracks-v1a1/mono.m3u8" },
-        { name: "FIFA World Cup (Server 1)", type: "Sports", url: "https://next.badinan.xyz/nexttv/FHD/playlist.m3u8" },
-        { name: "FIFA World Cup (Server 2)", type: "Sports", url: "https://kazimmt.ami.bd/playlist/TF/TF-1.m3u8" },
-        { name: "FIFA World Cup (Server 3)", type: "Sports", url: "http://66.102.126.10:8000/play/a018/index.m3u8" },
-        { name: "FIFA World Cup (Server 4)", type: "Sports", url: "https://xclive.yarncdn.live/live/xctv_blv_tholan/playlist.m3u8" },
-        { name: "FIFA World Cup (Server 5)", type: "Sports", url: "https://andro.226503.xyz/checklist/androstreamlivebs1.m3u8" },
-        { name: "FIFA World Cup (Server 6)", type: "Sports", url: "https://live05.koepgd.app/live/24561735.m3u8" },
-        { name: "T Sports App Link 1", type: "Sports", url: "https://live.tsports.com/mobile_hls/tsports_live_1/playlist.m3u8" },
-        { name: "T Sports App Link 2", type: "Sports", url: "https://live.tsports.com/mobile_hls/tsports_live_3/playlist.m3u8" }
+        { name: "T Sports HD", type: "Sports", url: "https://trs1.aynaott.com/tsports/index.m3u8" },
+        { name: "BTV", type: "Sports", url: "http://198.195.239.50:8095/btv/tracks-v1a1/mono.m3u8" },
+        { name: "Somoy TV", type: "Sports", url: "https://live.thebosstv.com:30443/dwlive/Somoy-TV/chunks.m3u8" },
+        { name: "Bein Sports 1 HD", type: "Sports", url: "https://1nyaler.streamhostingcdn.top/stream/23/index.m3u8" },
+        { name: "beIN SPORTS 1 UHD", type: "Sports", url: "http://proxpanel.cc/h1wqD6CY/byxHYgX/707929" },
+        { name: "ESPN S1", type: "Sports", url: "https://1nyaler.streamhostingcdn.top/stream/97/index.m3u8" },
+        { name: "ESPN S2", type: "Sports", url: "http://186.33.40.97:8789/play/20" },
+        { name: "FOX Sports", type: "Sports", url: "http://84.17.50.102/fox/index.m3u8" },
+        { name: "FS1", type: "Sports", url: "http://fastshare1.com:8080/live/931461266/374152877/751354.ts?RKDYIPTV&token=rkdyiptv" },
+        { name: "Telemundo", type: "Sports", url: "https://nbculocallive.akamaized.net/hls/live/2037499/puertorico/stream1/master.m3u8" },
+        { name: "TVRI Sport", type: "Sports", url: "http://103.148.44.38:8000/play/a05u/index.m3u8" },
+        { name: "TNS 1", type: "Sports", url: "http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3146.ts" },
+        { name: "TNS 2", type: "Sports", url: "http://s.rocketdns.info:8080/live/monstercable/Dq6jjknxCr/3145.ts" },
+        { name: "Unite 8 Sports 1 HD", type: "Sports", url: "http://starhub.pro/live/farhat-3379/67897-913379/741567.ts" },
+        { name: "Unite 8 Sports 2 HD", type: "Sports", url: "http://212.102.34.8:9080/AndFlixHD/video.m3u8" },
+        { name: "TVP Sports", type: "Sports", url: "https://1nyaler.streamhostingcdn.top/stream/89/index.m3u8" },
+        { name: "M6", type: "Sports", url: "https://tv.beyondtaxconsultants.com/api/robi/lps/http://151.80.18.177:86/M6_HD/index.m3u8" },
+        { name: "WIN Sports", type: "Sports", url: "https://1nyaler.streamhostingcdn.top/stream/32/index.m3u8" },
+        { name: "S Football", type: "Sports", url: "http://rgkkw.live/live/1Aoen7elp5/IgMJ60tmAa/745149.ts" },
+        { name: "PTV 4K", type: "Sports", url: "http://starhub.pro/live/farhat-3379/67897-913379/89.ts" },
+        { name: "DAZN 1", type: "Sports", url: "https://1nyaler.streamhostingcdn.top/stream/94/index.m3u8" },
+        { name: "D Sports", type: "Sports", url: "https://1nyaler.streamhostingcdn.top/stream/106/index.m3u8" },
+        { name: "Tudn Sports", type: "Sports", url: "https://1nyaler.streamhostingcdn.top/stream/52/index.m3u8" }
     ]
 };
 
